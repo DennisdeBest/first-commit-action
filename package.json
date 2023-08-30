@@ -1,0 +1,23 @@
+{
+  "name": "first-commit-action",
+  "version": "1.0.0",
+  "description": "Check if the current commit is the first ever commit of the project",
+  "main": "index.js",
+  "keywords": [
+    "github",
+    "action"
+  ],
+  "author": "Dennis de Best",
+  "license": "ISC",
+  "scripts": {
+    "lint": "eslint .",
+    "prepare": "ncc build index.js -o dist --source-map --license licenses.txt",
+    "test": "jest",
+    "all": "npm run lint && npm run prepare && npm run test"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "axios": "^1.5.0"
+  }
+}

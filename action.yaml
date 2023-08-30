@@ -1,0 +1,12 @@
+name: 'Is First Commit'
+description: 'Check if the current commit is the first-ever commit of the project'
+inputs:
+    github-token:
+        description: 'GitHub token'
+        required: false
+outputs:
+    isFirstCommit:
+        description: 'A boolean indicating if the current commit is the first one'
+runs:
+    using: 'node16'
+    main: 'dist/index.js'
